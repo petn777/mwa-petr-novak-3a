@@ -37,7 +37,7 @@ function App() {
       </nav>
       <main>
         <div className="mt-32 max-w-7xl mx-auto py-6 sm:px-6 lg:px-8 flex flex-col items-center justify-center font-sans">
-            <p className="text-7xl text-gray-800 font-semibold ">Top Quality Web</p>
+            <p className="text-7xl text-gray-800 font-semibold ">Top Quality Web xx</p>
             <p className="text-col text-gray-800 text-7xl font-semibold">To Trade Your Own Crypto</p>
             <div className="mt-8 text-col text-gray-800 text-xl text-center">
               <p>Get your your crypto ready</p>
