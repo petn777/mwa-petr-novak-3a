@@ -1,11 +1,40 @@
 import logo from './logo.svg';
 import './App.css';
+import {useState} from "react";
 import cart from './images/cart.jpg';
+import DefaulBtn from './Button';
+import FirstComp from './FirstComp';
+import SecondComp from './SecondComp';
 
 function App() {
-  return (
+  
+  const [count, setCount] = useState(0);
+const handleClick= () =>{
+
+  console.log("Btn clicked")
+  setCount(count+1);
+}
+
+
+
+  
+return (
 
 <div>
+  <div>
+    <div className="bg-green-400 fles justify-center p-4">
+      <h1>
+        {`Počet: ${count}`}
+      </h1>
+      <button
+      onClick={handleClick} 
+      className="px-4 py-2 bg-red-800 rounded-lg shadow-md hover:bg-yellow-300 hover:skew-x-2xl hover:text-gray-600 text-center transition-all duration-200">Přidat 1</button>
+    </div>
+
+    
+
+
+  </div>
       <nav className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -44,35 +73,22 @@ function App() {
               <p className="mt-2">Multiply your money stogreen in cryptocurrencies</p>
               <p className="mt-2">Leave with the greatest profit that is not offegreen anywhere</p>
             </div>          
-            <a class="mt-5 border border-green-500 hover:border-green-500 hover:bg-white hover:text-green-500 rounded-3xl py-3 px-10 bg-green-500 text-white font-medium" href="#">Explore</a>
+            <a class="mt-5 border border-green-500 hover:border-green-500 hover:bg-white hover:text-green-500 rounded-3xl py-3 px-10 bg-green-500 transition-all transition-800 text-white font-medium" href="#">Explore</a>
             <img className="mt-16 border rounded-3xl" src="https://www.globalbankingandfinance.com/wp-content/uploads/2019/08/crypto.jpg"
                   alt="x"/>
             <p className="mt-8 text-3xl text-green-500 font-semibold">Our functions</p>
             <div className="mt-6 grid grid-cols-4">
-              <div className="">
-              <img className="h-16 w-16" src={cart}
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
+              <FirstComp
+                photo={cart}/>
+              
+              <FirstComp
+                photo="https://www.nicepng.com/png/detail/381-3819392_selling-png-png-sell-icon.png"/>
 
-              </div>
-              <div className="">
-              <img className="h-16 w-16 border border-white rounded-3xl" src="https://www.nicepng.com/png/detail/381-3819392_selling-png-png-sell-icon.png"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam</p>
-                
-              </div>
-              <div className="">
-              <img className="h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
-              </div>
-              <div className="">
-              <img className="h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
-              </div>
+              <FirstComp
+                photo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"/>
+              
+              <FirstComp
+                photo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"/>
             </div>
 
 
@@ -85,50 +101,39 @@ function App() {
               </div>
               <div className="">
               <p className="text-3xl text-green-500 font-semibold">Our functions</p>
-              <img className="mt-4 h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
 
-
-              <img className="mt-4 h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
+              <SecondComp
+                photo1="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"
+                photo2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"
+                pp="mt-2"
+                ip="mt-4 h-16 w-16"
+                txt="Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+              />
+              
               </div>
               
             </div>
-
-
 
             <p className="mt-48 text-3xl text-green-500 font-semibold">Our functions</p>
             <p className="mt-5 text-5xl font-semibold">Everything is possible</p>
             <div className="mt-10 grid grid-cols-2 grid-rows-2">
 
+              <SecondComp
+                ip="h-16 w-16 border border-white rounded-3xl"
+                pp="mt-4 mb-4"
+                txt="Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+                photo1={cart}
+                photo2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"
+              />
               
-              <div className="">
-              <img className="h-16 w-16" src={cart}
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
-              </div>
-              <div className="">
-              <img className="h-16 w-16 border border-white rounded-3xl" src="https://www.nicepng.com/png/detail/381-3819392_selling-png-png-sell-icon.png"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam</p>
-                
-              </div>
-              <div className="">
-              <img className="h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQE1pgh9W9EF1LajQ1_6at-KawpLmD62tTsbZoOX2mHudTmRd0CC-1e3SQZolmbpkpaBF0&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
-              </div>
-              <div className="">
-              <img className="h-16 w-16" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"
-                  alt="x"/>
-                <p className="mt-2 mb-5">Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam.</p>
-
-              </div>
+              <SecondComp
+                ip="h-16 w-16 border border-white rounded-3xl"
+                pp="mt-4 mb-4"
+                txt="Duis condimentum augue id magna semper rutrum. Duis risus. Etiam dui sem, fermentum vitae, sagittis id, malesuada in, quam."
+                photo1="https://www.nicepng.com/png/detail/381-3819392_selling-png-png-sell-icon.png"
+                photo2="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhqob9HkgCzmajro5a_nHSfNBKQ19swF7QhA&usqp=CAU"
+              />
+              
             </div>
         </div>
 
@@ -136,5 +141,8 @@ function App() {
     </div>
   );
 }
+
+
+
 
 export default App;
