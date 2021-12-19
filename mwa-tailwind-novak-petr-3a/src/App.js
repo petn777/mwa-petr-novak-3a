@@ -1,40 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import cart from './images/cart.jpg';
 import DefaulBtn from './Button';
 import FirstComp from './FirstComp';
 import SecondComp from './SecondComp';
 
 function App() {
-  
   const [count, setCount] = useState(0);
-const handleClick= () =>{
 
-  console.log("Btn clicked")
-  setCount(count+1);
-}
+  const [isToggle, setIsToggle] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [data, setData] = useState([]);
 
+  useEffect(() => {
+    const fetchData = async () => {
+      console.log("Začátek fetch data");
+      const res = await fetch("https://jsonplaceholder.typicode.com/todos", {
+        method: "GET",
+      });
+      console.log("Po zavolání na API");
+      const data = await res.json();
+      console.log(data);
+      console.log(data[10].title)
+      setData(data);
+      setLoading(false);
+    };
 
+    console.log("Start use effect");
 
+    console.log("Před zavoláním fetchData");
+    fetchData();
+    console.log("Po zavolání fetchData");
+  }, []);
   
 return (
 
 <div>
-  <div>
-    <div className="bg-green-400 fles justify-center p-4">
-      <h1>
-        {`Počet: ${count}`}
-      </h1>
-      <button
-      onClick={handleClick} 
-      className="px-4 py-2 bg-red-800 rounded-lg shadow-md hover:bg-yellow-300 hover:skew-x-2xl hover:text-gray-600 text-center transition-all duration-200">Přidat 1</button>
-    </div>
-
-    
-
-
-  </div>
       <nav className="bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
@@ -116,7 +118,7 @@ return (
 
             <p className="mt-48 text-3xl text-green-500 font-semibold">Our functions</p>
             <p className="mt-5 text-5xl font-semibold">Everything is possible</p>
-            <div className="mt-10 grid grid-cols-2 grid-rows-2">
+            <div className="mt-10 grid grid-cols-2">
 
               <SecondComp
                 ip="h-16 w-16 border border-white rounded-3xl"
