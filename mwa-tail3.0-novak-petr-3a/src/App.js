@@ -50,34 +50,45 @@ function App() {
     
       <div class="container shadow-2xl shadow-blue-600 mx-auto bg-white rounded-2xl">
         <div class="grid sm:grid-cols-2 justify-items-center">
-          <div class="grid justify-items-center grid-cols-2 text-col text-center mt-48 bg-gray-200 max-w-2xl rounded-3xl font-serif">
+          <div class="grid justify-items-center text-center mt-48 bg-gray-200 max-w-2xl rounded-3xl font-serif w-4/6 shadow-lg shadow-blue-600">
             <p class="mt-12">• Buy HashRate Now</p>
-            <p class="mt-12">• Start mining now with cloud hashrate.</p>
             <p>• BUY IT, MINE IT, SELL IT</p>
-            <p>• This hashrate is provided by our EXTREME big crpytomining farm</p>
             <p>• Absolutely easy, user friendly, 0 problems</p>
-            <p>• 100% CASHBACK</p>
             
-              <button class="bg-blue-500 transition-all duration-200 mb-4 mt-10 hover:bg-blue-400 text-white font-bold border-b-4 px-8 border-blue-700 hover:border-blue-500 rounded-2xl">
-                Start buying
-              </button>
-              <button class="bg-blue-500 transition-all duration-200 mb-4 mt-10 hover:bg-blue-400 text-white font-bold border-b-4 px-8 border-blue-700 hover:border-blue-500 rounded-2xl">
-                Learn more
-              </button>
-
+            <button class="bg-blue-500 transition-all duration-200 mb-4 mt-10 hover:bg-blue-400 text-white font-bold border-b-4 px-8 border-blue-700 hover:border-blue-500 rounded-2xl">
+              Start buying
+            </button>
           </div>
-          <div class="grid grid-cols-2 justify-items-center mt-48">
-
-            <img class="border rounded-xl mt-12 shadow-lg shadow-blue-600" src="https://2miners.com/blog/wp-content/uploads/2018/02/what-is-mining-luck-ethereum-pool.png" alt="x" />
-            <img class="border rounded-xl shadow-lg shadow-blue-600" src="https://m.media-amazon.com/images/I/31Bk3mwBKRL._AC_SX355_.jpg" alt="x" />
+          <div class="grid justify-items-center mt-36">
+            <img class="border w-11/12 rounded-xl mt-12 shadow-lg shadow-blue-600" src="https://2miners.com/blog/wp-content/uploads/2018/02/what-is-mining-luck-ethereum-pool.png" alt="x" />
           </div>
         </div>
 
         <div class="grid justify-items-center mt-12">
           <p class="mb-5 font-bold text-5xl underline text-blue-900 text-center">Extreme profitabilty with US</p>
           <img class="justify-items-center border rounded-3xl shadow-lg shadow-blue-600 mb-9" src="https://miro.medium.com/max/1400/1*s8EgntSlYEbaJ1d9lJTADQ.png" alt="x" />
-
         </div>
+
+
+        <div class="grid sm:grid-cols-2 justify-items-center">
+          <div class="grid justify-items-center mt-12 mb-12">
+            <img class="border rounded-xl shadow-lg shadow-blue-600" src="https://m.media-amazon.com/images/I/31Bk3mwBKRL._AC_SX355_.jpg" alt="x" />
+          </div>
+          <div class="grid justify-items-center text-col text-center mt-12 mb-12 bg-gray-200 max-w-2xl rounded-3xl font-serif w-4/6 shadow-lg shadow-blue-600">
+            <p class="mt-12">• Start mining now with cloud hashrate.</p>
+            <p>• This hashrate is provided by our EXTREME big crpytomining farm</p>
+            <p>• 100% CASHBACK</p>
+            <button class="bg-blue-500 transition-all duration-200 mb-4 mt-10 hover:bg-blue-400 text-white font-bold border-b-4 px-8 border-blue-700 hover:border-blue-500 rounded-2xl">
+              Learn more
+            </button>
+          </div>
+          
+        </div>
+
+
+
+
+
       </div>
   
 
