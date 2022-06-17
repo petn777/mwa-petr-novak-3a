@@ -1,0 +1,17 @@
+query getPosts {
+  posts {
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        id
+        databaseId
+        title
+        slug
+        authorId
+      }
+    }
+  }
+}

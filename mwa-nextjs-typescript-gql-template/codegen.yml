@@ -1,0 +1,13 @@
+overwrite: true
+schema: "https://presloviny-dev.vrkota.name/graphql"
+documents: "lib/graphql/**/*.graphql"
+generates:
+  generated/graphql-types.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+      - "fragment-matcher"
+hooks:
+  afterAllFileWrite:
+    - prettier --write
